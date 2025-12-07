@@ -685,3 +685,194 @@ body {
     background-color: #d3d3d3;
     color: black;
 }
+
+/* MEDIA RESPONSIVE */
+
+@media (max-width: 767px) {
+    
+    /* NAV-BAR (CORREÇÃO DE SOBREPOSIÇÃO) */
+    .nav-bar {
+        flex-wrap: wrap; 
+        padding: 10px 0;
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 1;
+        position: static; /* IMPEDE SOBREPOSIÇÃO COM ABSOLUTE */
+        left: auto;
+        top: auto; 
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .responsive-buttons {
+        order: 2;
+        position: static; /* IMPEDE SOBREPOSIÇÃO COM ABSOLUTE */
+        right: auto; 
+        margin-left: auto;
+        gap: 15px;
+    }
+    
+    .navigation {
+        order: 3;
+        flex-basis: 100%; /* FORÇA OS LINKS A FICAREM ABAIXO */
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 10px;
+    }
+
+    /* HOME BEGINS (EMPIHAMENTO E CORREÇÃO DE TAMANHOS) */
+    .home-begins {
+        flex-direction: column; /* Empilha: fotos no topo, texto abaixo */
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .home-title {
+        order: 2;
+        margin-top: 2rem;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .home-title h1 {
+        font-size: 2.5rem;
+    }
+
+    #popcorn-button {
+        font-size: 3rem;
+    }
+    
+    #title-movies {
+        font-size: 5rem; /* Reduzido para caber */
+        letter-spacing: 10px;
+        width: 100%; 
+        border-right-width: 5px;
+    }
+    
+    .movie-photos {
+        order: 1;
+        position: static; /* IMPEDE SOBREPOSIÇÃO COM ABSOLUTE */
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .batman-photo, .deadpool-photo {
+        position: static;
+        width: 48%; 
+        height: auto;
+    }
+    
+    /* TRENDING */
+    .trending-movies {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+/* ========================================= */
+/* 3. MEDIA QUERY: SMARTPHONES ULTRA COMPACTOS (max-width: 468px) */
+/* ========================================= */
+
+@media (max-width: 468px) {
+    
+    /* NAV-BAR */
+    .logo img {
+        height: 100px;
+    }
+
+    .navigation p {
+        font-size: 0.8rem; 
+        padding: 4px 8px;
+    }
+
+    /* HOME BEGINS (TITULO PRINCIPAL) */
+    .home-title h1 {
+        font-size: 2rem;
+    }
+    
+    #title-movies {
+        font-size: 4rem; /* Reduzido para caber */
+        letter-spacing: 5px;
+        width: 100%;
+    }
+
+    .home-title p {
+        margin-top: 10px;
+        font-size: 0.6rem;
+    }
+
+    .batman-photo, .deadpool-photo {
+        width: 90%; 
+    }
+    
+    /* TRENDING */
+    .trending-movies {
+        display: grid; 
+        grid-template-columns: repeat(4 1fr); 
+        gap: 10px;
+        height: auto;
+    }
+
+    .trending-movies > div,
+    .zootopia-movie, .frankenstein-movie, .predator-movie, .wicked-movie {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .trending-movies img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    
+    .movie-info {
+        padding: 5px;
+    }
+
+    .movie-info h2 {
+        font-size: 1rem;
+    }
+
+    .movie-info p {
+        font-size: 0.75rem;
+    }
+
+    .costa-tips-section {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px; 
+        margin-top: 50px; 
+        width: 100%;
+    }
+
+    #slide {
+        padding-top: 30px;
+        height: 300px;
+        width: 50%; 
+        margin: 0 auto;
+    }
+
+    .costa-tips-section img:last-child {
+        height: 180px; 
+        margin: 0 auto;
+    }
+
+    .button-tips {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px; 
+    }
+
+    .btn-img img {
+        width: 30px;
+        height: 30px;
+    }
+}
