@@ -285,14 +285,80 @@ body {
     transform: translateY(-5px);
 }
 
-/* RESPONSIVE: */
+/* MEDIA RESPONSIVE: */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+
+    .header {
+        padding: 10px 3%; 
+    }
+    
+    .logo img {
+        height: 150px;
+    }
+
+    .navigation {
+        gap: 1rem;
+        padding-top: 5px;
+    }
+    
+    .navigation p {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .responsive-buttons div img {
+        margin-top: 130px;
+        height: 20px;
+    }
+
+    .search-section {
+        padding: 30px 3%;
+    }
+
+    .search-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .search-box {
+        flex-direction: column; 
+        max-width: 95%;
+    }
+
     .search-box input {
-        width: 80%;
+        width: 100%; 
+        padding: 10px;
     }
 
     .search-box button {
-        width: 50%;
+        width: 100%; 
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .results-section {
+        padding: 20px 3%;
+    }
+    
+    .results-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
+        gap: 10px;
+    }
+
+    .result-card img {
+        height: 180px; 
+    }
+    
+    .result-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .site-footer {
+        padding: 10px 0;
+        font-size: 0.8rem;
     }
 }
