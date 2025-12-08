@@ -253,7 +253,7 @@ body {
 }
 
 [data-theme="light"] .search-box input:focus {
-    outline: 2px solid #e50914; /* destaque ao focar */
+    outline: 2px solid #e50914;
 }
 
 [data-theme="light"] .search-box button {
