@@ -47,44 +47,6 @@
             </div>
         </div>
 
-        <div class="trending-section">
-            <h2>TRENDING</h2>
-            <div class="trending-movies">
-
-                <div class="zootopia-movie">
-                    <img src="./images/zootopia 2 photo.png" class="zootopia-poster">
-                    <div class="movie-info">
-                        <h2>ZOOTOPIA 2</h2>
-                        <p>ANIMATION</p>
-                    </div>
-                </div>
-
-                <div class="frankenstein-movie">
-                    <img src="./images/frankenstein photo.png" class="frankenstein-poster">
-                    <div class="movie-info">
-                        <h2>FRANKENSTEIN</h2>
-                        <p>THRILLER</p>
-                    </div>
-                </div>
-
-                <div class="predator-movie">
-                    <img src="./images/predator photo.png" class="predator-poster">
-                    <div class="movie-info">
-                        <h2>PREDATOR: BADLANDS</h2>
-                        <p>SCIENCE FICTION</p>
-                    </div>
-                </div>
-
-                <div class="wicked-movie">
-                    <img src="./images/wicked photo.png" class="wicked-poster">
-                    <div class="movie-info">
-                        <h2>WICKED: FOR GOOD</h2>
-                        <p>MUSICAL</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="costa-tips-section">
             <img id="slide" src="./images/img1.png" class="fade">
             <img src="./images/Logo CostaTips.png">
@@ -95,6 +57,81 @@
                 <img src="./images/lightbulb-button.png">
             </button>
         </div>
+        
+        <div class="trending-section">
+            <h2>TRENDING</h2>
+            <div class="trending-movies">
+                
+                <div class="zootopia-movie"
+                data-image="./images/zootopia 2 photo.png"
+                data-title="ZOOTOPIA 2"
+                data-year="2025"
+                data-genre="Animation"
+                data-synopsis="A new adventure in Zootopia with officers Judy Hopps and Nick Wilde."
+                data-watch="Disney+">
+                <img src="./images/zootopia 2 photo.png" class="zootopia-poster">
+                <div class="movie-info">
+                    <h2>ZOOTOPIA 2</h2>
+                    <p>ANIMATION</p>
+                </div>
+            </div>
+            
+                <div class="frankenstein-movie"
+                data-image="./images/frankenstein photo.png"
+                data-title="FRANKENSTEIN"
+                data-year="2025"
+                data-genre="Thriller"
+                data-synopsis="Based on the novel by Mary Shelley, a modern take on the classic tale of creation and horror."
+                data-watch="HBO Max">
+                <img src="./images/frankenstein photo.png" class="frankenstein-poster">
+                <div class="movie-info">
+                    <h2>FRANKENSTEIN</h2>
+                    <p>THRILLER</p>
+                </div>
+            </div>
+
+                <div class="predator-movie"
+                data-image="./images/predator photo.png"
+                data-title="PREDATOR: BADLANDS"
+                data-year="2025"
+                data-genre="Science Fiction"
+                data-synopsis="The legendary hunter returns in a new action-packed saga set in unexplored territories."
+                data-watch="Hulu">
+                <img src="./images/predator photo.png" class="predator-poster">
+                <div class="movie-info">
+                    <h2>PREDATOR: BADLANDS</h2>
+                    <p>SCIENCE FICTION</p>
+                </div>
+            </div>
+            
+                <div class="wicked-movie"
+                data-image="./images/wicked photo.png"
+                data-title="WICKED: FOR GOOD"
+                data-year="2025"
+                data-genre="Musical"
+                data-synopsis="The second part of the magical cinematic event, continuing the story of Elphaba and Glinda."
+                data-watch="Peacock">
+                <img src="./images/wicked photo.png" class="wicked-poster">
+                <div class="movie-info">
+                    <h2>WICKED: FOR GOOD</h2>
+                    <p>MUSICAL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="movie-detail" class="movie-detail hidden">
+        <div class="detail-content">
+            <span id="close-detail" class="close-button">&times;</span>
+            
+            <img id="detail-image" src="">
+            <h2 id="detail-title"></h2>
+            <p id="detail-year"></p>
+            <p id="detail-genre"></p>
+            <p id="detail-synopsis"></p>
+            <p id="detail-watch"></p>
+        </div>
+    </div>
 
         <div class="old-but-gold-section">
             <h3>OLD BUT 🪙</h3>

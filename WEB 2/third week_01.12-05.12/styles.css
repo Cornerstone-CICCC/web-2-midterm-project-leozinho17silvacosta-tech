@@ -269,6 +269,8 @@ body {
     text-align: center;
     color: white;
     letter-spacing: 4px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.505);
 }
 
 .trending-movies {
@@ -371,6 +373,93 @@ body {
     transform: translateY(-10px);
 }
 
+/* MOVIE DETAIL START */
+
+.movie-detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 86, 86, 0.436);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.movie-detail.hidden {
+    display: none;
+}
+
+.detail-content {
+    background: rgb(255, 217, 217);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 700px;
+    color: #000;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    color: black;
+}
+
+.detail-content img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 70px;
+    margin-bottom: 20px;
+}
+
+.detail-content h2 {
+    font-family: 'Outfit', sans-serif;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.detail-content p {
+    font-family: 'Outfit', sans-serif;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.movie-detail .label {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.movie-detail .value {
+    color: #555;
+    font-weight: normal;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.close-button:hover {
+    color: #e50914;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* MOVIE DETAILS END: */
+
 /*TRENDING END:*/
 
 /*COSTA TIPS START:*/
@@ -380,11 +469,10 @@ body {
 }
 
 .costa-tips-section {
-    margin-top: 450px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 130px;
-    border-top: 1px solid rgba(255, 255, 255, 0.505);
 }
 
 #slide {
@@ -412,7 +500,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .btn-img {
@@ -446,6 +534,7 @@ body {
 
 .old-but-gold-section {
     border-top: 1px solid rgba(255, 255, 255, 0.505);
+    margin-top: 500px;
 }
 
 .old-but-gold-section h3 {
@@ -648,7 +737,11 @@ body {
 }
 
 .light-mode .home-title {
-    color: black;
+    color: black; 
+}
+
+.light-mode .home-begins {
+    border-bottom: 1px solid black;
 }
 
 .light-mode .home-title button:hover {
@@ -659,6 +752,14 @@ body {
 .light-mode #title-movies {
     color: rgb(255, 0, 0);
     border-right: 10px solid black;
+}
+
+.light-mode .trending-section {
+    border-top: 1px solid black;
+}
+
+.light-mode .old-but-gold-section {
+    border-top: 1px solid black;
 }
 
 .light-mode .trending-section h2,
@@ -690,7 +791,7 @@ body {
 
 @media (max-width: 767px) {
     
-    /* NAV-BAR (CORREÇÃO DE SOBREPOSIÇÃO) */
+    /* NAV-BAR */
     .nav-bar {
         flex-wrap: wrap; 
         padding: 10px 0;
@@ -699,7 +800,7 @@ body {
 
     .logo {
         order: 1;
-        position: static; /* IMPEDE SOBREPOSIÇÃO COM ABSOLUTE */
+        position: static;
         left: auto;
         top: auto; 
     }
@@ -710,7 +811,7 @@ body {
 
     .responsive-buttons {
         order: 2;
-        position: static; /* IMPEDE SOBREPOSIÇÃO COM ABSOLUTE */
+        position: static;
         right: auto; 
         margin-left: auto;
         gap: 15px;
@@ -718,15 +819,15 @@ body {
     
     .navigation {
         order: 3;
-        flex-basis: 100%; /* FORÇA OS LINKS A FICAREM ABAIXO */
+        flex-basis: 100%;
         justify-content: center;
         gap: 1rem;
         padding-top: 10px;
     }
 
-    /* HOME BEGINS (EMPIHAMENTO E CORREÇÃO DE TAMANHOS) */
+    /* HOME BEGINS*/
     .home-begins {
-        flex-direction: column; /* Empilha: fotos no topo, texto abaixo */
+        flex-direction: column;
         text-align: center;
         padding-bottom: 20px;
     }
@@ -747,7 +848,7 @@ body {
     }
     
     #title-movies {
-        font-size: 5rem; /* Reduzido para caber */
+        font-size: 5rem;
         letter-spacing: 10px;
         width: 100%; 
         border-right-width: 5px;
@@ -755,7 +856,7 @@ body {
     
     .movie-photos {
         order: 1;
-        position: static; /* IMPEDE SOBREPOSIÇÃO COM ABSOLUTE */
+        position: static;
         width: 100%;
         height: auto;
         display: flex;
@@ -771,13 +872,14 @@ body {
     
     /* TRENDING */
     .trending-movies {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* OLD BUT GOLD */
+    .old-but-gold-section {
+        margin-top: 40px;
     }
 }
-
-/* ========================================= */
-/* 3. MEDIA QUERY: SMARTPHONES ULTRA COMPACTOS (max-width: 468px) */
-/* ========================================= */
 
 @media (max-width: 468px) {
     
@@ -791,13 +893,13 @@ body {
         padding: 4px 8px;
     }
 
-    /* HOME BEGINS (TITULO PRINCIPAL) */
+    /* HOME BEGINS */
     .home-title h1 {
         font-size: 2rem;
     }
     
     #title-movies {
-        font-size: 4rem; /* Reduzido para caber */
+        font-size: 4rem;
         letter-spacing: 5px;
         width: 100%;
     }
