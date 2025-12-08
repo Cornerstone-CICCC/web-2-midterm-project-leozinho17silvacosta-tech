@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CostaFlix</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="./images/Logo CostaFlix.png">
+            </div>
+
+            <div class="navigation">
+                <p id="home-section">HOME</p>
+                <a href="./about-section/about.html">
+                    <p id="about-section">ABOUT</p>
+                </a>
+                <a href="./search-section/search.html">
+                    <p id="search-section">SEARCH</p>
+                </a>
+            </div>
+
+            <div class="responsive-buttons">
+                <div class="dark-mode-button" id="theme-toggle">
+                    <img src="./images/logo dark mode.png">
+                </div>
+
+                <div class="language-button" id="lang-toggle">
+                    <img src="images/logo language dark mode.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="home-begins">
+            <div class="home-title"> 
+                <h1>FIND THE BEST <span id="popcorn-button">🍿</span>
+                    <span id="title-movies">
+                        <span>M</span><span>O</span><span>V</span><span>I</span><span>E</span><span>S</span>
+                    </span>
+                </h1>
+                <p>Browse through a wide variety of genres, grab your popcorn and your favorite drink, get cozy in bed, and hit play. Enjoy the best at-home cinema experience!</p>
+                <a href="./search-section/search.html">
+                    <button>SEARCH MOVIES</button>
+                </a>
+                
+            </div>
+
+            <div class="movie-photos">
+                <img src="./images/batman movie photo.png" class="batman-photo">
+                <img src="./images/deadpool movie photo.png" class="deadpool-photo">
+            </div>
+        </div>
+
+        <div class="costa-tips-section">
+            <img id="slide" src="./images/img1.png" class="fade">
+            <img src="./images/Logo CostaTips.png">
+        </div>
+
+        <div class="button-tips">
+            <a href="./costatips-section/costatips.html">
+                <button class="btn-img">
+                    <img src="./images/lightbulb-button.png">
+                </button>
+            </a>
+        </div>
+        
+        <div class="trending-section">
+            <h2>TRENDING</h2>
+            <div class="trending-movies">
+                
+                <div class="zootopia-movie"
+                data-image="./images/zootopia 2 photo.png"
+                data-title="ZOOTOPIA 2"
+                data-year="2025"
+                data-genre="Animation"
+                data-synopsis="A new adventure in Zootopia with officers Judy Hopps and Nick Wilde."
+                data-watch="Disney+">
+                <img src="./images/zootopia 2 photo.png" class="zootopia-poster">
+                <div class="movie-info">
+                    <h2>ZOOTOPIA 2</h2>
+                    <p>ANIMATION</p>
+                </div>
+            </div>
+            
+                <div class="frankenstein-movie"
+                data-image="./images/frankenstein photo.png"
+                data-title="FRANKENSTEIN"
+                data-year="2025"
+                data-genre="Thriller"
+                data-synopsis="Based on the novel by Mary Shelley, a modern take on the classic tale of creation and horror."
+                data-watch="Netflix">
+                <img src="./images/frankenstein photo.png" class="frankenstein-poster">
+                <div class="movie-info">
+                    <h2>FRANKENSTEIN</h2>
+                    <p>THRILLER</p>
+                </div>
+            </div>
+
+                <div class="predator-movie"
+                data-image="./images/predator photo.png"
+                data-title="PREDATOR: BADLANDS"
+                data-year="2025"
+                data-genre="Science Fiction"
+                data-synopsis="The legendary hunter returns in a new action-packed saga set in unexplored territories."
+                data-watch="Hulu">
+                <img src="./images/predator photo.png" class="predator-poster">
+                <div class="movie-info">
+                    <h2>PREDATOR: BADLANDS</h2>
+                    <p>SCIENCE FICTION</p>
+                </div>
+            </div>
+            
+                <div class="wicked-movie"
+                data-image="./images/wicked photo.png"
+                data-title="WICKED: FOR GOOD"
+                data-year="2025"
+                data-genre="Musical"
+                data-synopsis="The second part of the magical cinematic event, continuing the story of Elphaba and Glinda."
+                data-watch="Peacock">
+                <img src="./images/wicked photo.png" class="wicked-poster">
+                <div class="movie-info">
+                    <h2>WICKED: FOR GOOD</h2>
+                    <p>MUSICAL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="movie-detail" class="movie-detail hidden">
+        <div class="detail-content">
+            <span id="close-detail" class="close-button">&times;</span>
+            
+            <img id="detail-image" src="">
+            <h2 id="detail-title"></h2>
+            <p id="detail-year"></p>
+            <p id="detail-genre"></p>
+            <p id="detail-synopsis"></p>
+            <p id="detail-watch"></p>
+        </div>
+    </div>
+
+        <div class="old-but-gold-section">
+            <h3>OLD BUT 🪙</h3>
+            <div class="slider slider-right">
+                <div class="slide-track">
+                    <img src="./images/10thingsihateu-movie.png">
+                    <img src="./images/blindside-movie.png">
+                    <img src="./images/forrest-gump-movie.png">
+                    <img src="./images/hachi-movie.png">
+                    <img src="./images/imlegend-movie.png">
+                    <img src="./images/10thingsihateu-movie.png">
+                    <img src="./images/blindside-movie.png">
+                    <img src="./images/forrest-gump-movie.png">
+                    <img src="./images/hachi-movie.png">
+                    <img src="./images/imlegend-movie.png">
+                </div>
+            </div>
+            
+            <div class="slider slider-left">
+                <div class="slide-track">
+                    <img src="./images/knowing-movie.png">
+                    <img src="./images/scarymovie-movie.png">
+                    <img src="./images/seven-movie.png">
+                    <img src="./images/thepursuitofhappyness-movie.png">
+                    <img src="./images/thewolfofwallstreet-movie.png">
+                    <img src="./images/knowing-movie.png">
+                    <img src="./images/scarymovie-movie.png">
+                    <img src="./images/seven-movie.png">
+                    <img src="./images/thepursuitofhappyness-movie.png">
+                    <img src="./images/thewolfofwallstreet-movie.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="button-gold-bar">
+            <button class="btn-img">
+                <img src="./images/goldbar-button.png">
+            </button>
+        </div>
+    </div>
+
+    <section class="contact-section">
+    <h4>SOME ISSUES?</h4>
+    <p>CONTACT US</p>
+
+    <form action="mailto:SEUEMAILAQUI@email.com" method="POST" enctype="text/plain">
+        <label for="firstName">FIRST NAME:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">LAST NAME:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">EMAIL:</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="message">MESSAGE:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <div class="button-send">
+            <button type="submit">
+                <img src="./images/send-icon.png">
+            </button>
+        </div>
+    </form>
+</section>
+    
+    <section class="social-section">
+        <h5>FOLLOW US!</h5>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/costaflix_vancouver" target="_blank">
+                <img src="./images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+    <p>© 2025 CostaFlix. All rights reserved.</p>
+</footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
