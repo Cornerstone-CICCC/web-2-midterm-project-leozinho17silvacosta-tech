@@ -1,0 +1,502 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Changa+One:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* HEADER SECTION: */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 20px;
+}
+
+.navigation p {
+    font-family: 'Changa One', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.navigation p:hover { 
+    background-color: red;
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.35);
+    transform: translateY(-5px);
+    border-bottom: 4px solid white;
+}
+
+/* LOGO: */
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+
+.logo img {
+    height: 300px;
+}
+
+.logo:hover {
+    transform: translateY(-10px);
+}
+
+/* RESPONSIVE BUTTONS: */
+
+.responsive-buttons {
+    display: flex;
+    margin-top: -200px;
+    gap: 20px;
+}
+
+.responsive-buttons div img {
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.3s;
+}
+
+.responsive-buttons div img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* COSTA TIPS SECTION START: */
+
+.costa-tips-section {
+    font-family: 'Changa One', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 4px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.costa-tips-movies {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+
+.costa-tips-movies img {
+    height: 500px;
+}
+
+.tip-movie {
+    width: 335px;
+    height: 580px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    margin: 20px;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.5s ease;
+    margin-right: 90px;
+}
+
+.tip-movie:hover {
+    box-shadow: 0 8px 20px 10px rgba(255, 35, 35, 0.35);
+    transform: translateY(-10px);
+}
+
+/* COSTA TIPS BRAZIL MOVIES: */
+
+.costa-tips-brasil {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.costa-tips-brasil h3 {
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Changa One', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.costa-tips-brasil h3:hover {
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.35);
+    transform: translateY(-5px);
+    color: white;
+}
+
+.tip-brazilian-tropa-de-elite {
+    width: 341px;
+    height: 481px;
+    object-fit: cover;
+}
+
+.tip-brazilian-caramelo {
+    width: 384px;
+    height: 481px;
+    object-fit: cover;
+}
+
+.tip-brazilian-tudo-bem-natal {
+    width: 347px;
+    height: 481px;
+    object-fit: cover;
+}
+
+.costa-tips-brasil {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.costa-tips-brasil-row {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-info {
+    padding: 10px 0;
+}
+
+.movie-info h2 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #000;
+}
+
+.movie-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+/* COSTA TIPS SECTION END: */
+
+/* MOVIE DETAILS START: */
+
+.movie-detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 86, 86, 0.436);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.movie-detail.hidden {
+    display: none;
+}
+
+.detail-content {
+    background: rgb(255, 217, 217);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 700px;
+    color: #000;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    color: black;
+}
+
+.detail-content img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 70px;
+    margin-bottom: 20px;
+}
+
+.detail-content h2 {
+    font-family: 'Outfit', sans-serif;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.detail-content p {
+    font-family: 'Outfit', sans-serif;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.movie-detail .label {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.movie-detail .value {
+    color: #555;
+    font-weight: normal;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.close-button:hover {
+    color: #e50914;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* MOVIE DETAILS END: */
+
+/* FOOTER START: */
+
+.site-footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* FOOTER END: */
+
+/* LIGHT MODE */
+
+[data-theme="light"] body {
+    background: radial-gradient(circle, #ffffff, #dcdcdc);
+    color: #000000;
+    transition: background 0.3s, color 0.3s;
+}
+
+[data-theme="light"] .header {
+    background: radial-gradient(circle, #ffffff, #dcdcdc);
+    transition: background 0.3s;
+}
+
+[data-theme="light"] .navigation p {
+    color: black;
+    transition: all 0.5s ease;
+}
+
+[data-theme="light"] .navigation p:hover {
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.35);
+    transform: translateY(-5px);
+    color: white;
+}
+
+[data-theme="light"] .responsive-buttons img:hover {
+    filter: brightness(1.2);
+}
+
+[data-theme="light"] .costa-tips-section {
+    background: lightgray;
+    color: black;
+    transition: background 0.3s, color 0.3s;
+}
+
+[data-theme="light"] .costa-tips-section h2 {
+    color: black;
+}
+
+[data-theme="light"] .costa-tips-section p {
+    color: #333;
+}
+
+[data-theme="light"] .costa-tips-brasil h3 {
+    color: black;
+    transition: all 0.5s ease;
+}
+
+[data-theme="light"] .costa-tips-brasil h3:hover {
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.35);
+    transform: translateY(-5px);
+    color: black;
+}
+
+[data-theme="light"] .costa-tips-movies {
+    background: none;
+}
+
+[data-theme="light"] .tip-movie {
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.5s ease;
+}
+
+[data-theme="light"] .tip-movie:hover {
+    box-shadow: 0 8px 20px 10px rgba(255, 35, 35, 0.35);
+    transform: translateY(-10px);
+}
+
+[data-theme="light"] .tip-movie img {
+    object-fit: contain;
+}
+
+[data-theme="light"] .movie-info h2 {
+    color: #000;
+}
+
+[data-theme="light"] .movie-info p {
+    color: #555;
+}
+
+[data-theme="light"] .site-footer {
+    background: radial-gradient(circle, #ffffff, #dcdcdc);
+    color: #000000;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* MEDIA RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-top: 60px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        gap: 5px;
+    }
+
+    .navigation p {
+        margin: 0;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .responsive-buttons {
+        margin-right: -220px;
+        top: 10px;
+        right: 30px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .responsive-buttons img {
+        width: 100%;
+        height: 30px;
+    }
+
+    .logo {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .tip-movie {
+        width: 200px;
+        height: 280px;
+        border-radius: 12px;
+        margin-left: 80px;
+    }
+
+    .tip-poster {
+        width: 200px;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-top: -125px;
+    }
+
+    .movie-info h2 {
+        font-size: 0.75rem;
+        margin-top: 5px;
+    }
+
+    .movie-info p {
+        font-size: 0.6rem;
+    }
+
+    .costa-tips-movies {
+        gap: 12px;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .costa-tips-brasil h3 {
+        font-size: 1.5rem;
+    }
+
+    .tip-brazilian-tropa-de-elite,
+    .tip-brazilian-caramelo,
+    .tip-brazilian-tudo-bem-natal {
+        width: 230px; 
+        height: auto;
+        margin: 0;
+        object-fit: cover; 
+    }
+
+    .costa-tips-brasil-row {
+        gap: 10px;
+        justify-content: center;
+    }
+}
