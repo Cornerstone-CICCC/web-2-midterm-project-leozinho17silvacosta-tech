@@ -46,8 +46,6 @@ if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-mode");
 }
 
-
-
 // LANGUAGE SYSTEM (EN ↔ PT)
 
 const langToggle = document.getElementById("lang-toggle");
@@ -98,18 +96,12 @@ updateLanguage(localStorage.getItem("lang") || "EN");
 // click informations function:
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Seleciona o cartão de detalhes e o botão de fechar
     const movieDetail = document.getElementById('movie-detail');
     const closeButton = document.getElementById('close-detail');
-
-    // 2. Seleciona todos os filmes na seção TRENDING
-    // Usamos .querySelectorAll('.trending-movies > div') para pegar todos os filhos diretos (os cartões de filme)
     const movieCards = document.querySelectorAll('.trending-movies > div');
 
-    // 3. Adiciona um ouvinte de clique a cada cartão de filme
     movieCards.forEach(card => {
         card.addEventListener('click', function() {
-            // Extrai as informações dos atributos data- do cartão clicado
             const image = this.getAttribute('data-image');
             const title = this.getAttribute('data-title');
             const year = this.getAttribute('data-year');
@@ -117,25 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const synopsis = this.getAttribute('data-synopsis');
             const watch = this.getAttribute('data-watch');
 
-            // Preenche o cartão de detalhes com as informações
             document.getElementById('detail-image').src = image;
             document.getElementById('detail-title').textContent = title;
             document.getElementById('detail-year').textContent = `Year: ${year}`;
             document.getElementById('detail-genre').textContent = `Genre: ${genre}`;
             document.getElementById('detail-synopsis').textContent = `Synopsis: ${synopsis}`;
             document.getElementById('detail-watch').textContent = `Watch on: ${watch}`;
-
-            // Remove a classe 'hidden' para mostrar o cartão
             movieDetail.classList.remove('hidden');
         });
     });
 
-    // 4. Adiciona funcionalidade ao botão de fechar
     closeButton.addEventListener('click', () => {
-        movieDetail.classList.add('hidden'); // Adiciona a classe 'hidden' para ocultar o cartão
+        movieDetail.classList.add('hidden');
     });
 
-    // Opcional: Fechar ao clicar fora do cartão
     movieDetail.addEventListener('click', (e) => {
         if (e.target.id === 'movie-detail') {
             movieDetail.classList.add('hidden');

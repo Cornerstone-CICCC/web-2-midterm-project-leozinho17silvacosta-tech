@@ -1,0 +1,339 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Changa+One:ital@0;1&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+
+/* STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #252525, #000000);
+}
+
+/*NAV-BAR START:*/
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+    order: 2; 
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.logo img {
+    height: 350px;
+}
+
+.logo:hover {
+    transform: translateY(-10px);
+}
+
+.navigation {
+    display: flex;
+    gap: 3rem; 
+    padding-top: 0;
+    order: 1; 
+    margin-right: auto;
+    padding-left: 40px;
+}
+
+.navigation p {
+    font-family: 'Changa One', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.navigation p:hover { 
+    background-color: red;
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.35);
+    transform: translateY(-5px);
+    border-bottom: 4px solid white;
+}
+
+.responsive-buttons {
+    order: 3;
+    position: relative;
+    right: auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 40px;
+}
+
+.responsive-buttons img:hover {
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.35);
+    transform: translateY(-5px);
+}
+
+.responsive-buttons img {
+    width: 28px;
+    transition: all 0.3s ease;
+}
+
+/*NAV-BAR END:*/
+
+.about-us-container {
+    padding-bottom: 80px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: transparent;
+    color: #FFFFFF;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1; 
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-family: 'Changa One', sans-serif; 
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+#flix-color {
+    color: red;
+}
+
+.about-intro {
+    font-family: 'Outfit', sans-serif; 
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 40px;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+
+.mission-container {
+    margin: 60px 0;
+    padding: 30px 0;
+    border-top: 1px solid lightgray;
+}
+
+.mission-title {
+    margin-top: 10px;
+    font-family: 'Outfit', sans-serif; 
+    font-size: 3rem;
+    color: #FFFFFF; 
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+}
+
+.mission-list li {
+    font-family: 'Outfit', sans-serif;
+    color: black;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 35, 35, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.mission-list li:hover {
+    background-color: rgba(255, 35, 35, 0.1); 
+    box-shadow: 0 8px 20px 10px rgba(255, 35, 35, 0.35);
+    transform: translateY(-10px);
+    border-bottom: 4px solid #FFFFFF;
+    color: white;
+}
+
+.mission-list li strong {
+    color: #ff3535; 
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Changa One', sans-serif;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/*FOOTER START:*/
+
+.site-footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/*FOOTER END:*/
+
+/* LIGHT MODE: */
+
+body.light-mode {
+    background: #F0F0F0;
+    color: #000000;
+}
+
+body.light-mode .nav-bar {
+    background: radial-gradient(circle, #ffffff, #dcdcdc);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .navigation p {
+    color: black;
+}
+
+body.light-mode .navigation p:hover {
+    background-color: #ff3535;
+    color: white; 
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.15);
+    border-bottom: 4px solid black;
+}
+
+body.light-mode .about-us-container {
+    color: black;
+}
+
+body.light-mode .about-title {
+    color: black;
+}
+
+body.light-mode #flix-color {
+    color: #ff3535;
+}
+
+body.light-mode .mission-title {
+    color: black;
+    text-shadow: none;
+}
+
+body.light-mode .mission-list li {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC; 
+    color: black;
+}
+
+body.light-mode .mission-list li:hover {
+    background-color: #FFF5F5;
+    box-shadow: 0 8px 20px rgba(255, 35, 35, 0.1);
+    transform: translateY(-5px);
+    border-bottom: 4px solid black;
+}
+
+body.light-mode .mission-list li strong {
+    color: #ff3535;
+}
+
+body.light-mode .site-footer {
+    background-color: #E0E0E0;
+    color: #555555;
+    border-top: 1px solid #CCCCCC;
+}
+
+/* MEDIA RESPONSIVE: */
+
+@media (max-width: 768px) {
+    
+    .nav-bar {
+        padding: 10px 15px; 
+        justify-content: space-around;
+    }
+
+    .logo img {
+        height: 140px; 
+    }
+    
+    .navigation {
+        display: flex; 
+    }
+    
+    .responsive-buttons {
+        gap: 10px;
+    }
+
+    .responsive-buttons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .about-us-container {
+        padding-top: 100px; 
+        padding-bottom: 60px;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-intro {
+        font-size: 1rem;
+        text-align: start;
+        padding: 0;
+        letter-spacing: 0;
+    }
+    
+    .mission-title {
+        font-size: 1.8rem;
+    }
+
+    .mission-list {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    
+    .mission-list li {
+        padding: 15px;
+    }
+
+    .site-footer {
+        padding: 20px 10px;
+        font-size: 0.8rem;
+    }
+}
