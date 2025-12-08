@@ -93,3 +93,67 @@ function displayResults(results) {
         `;
     }).join("");
 }
+
+function displayResults(results) {
+    if (!results || results.length === 0) {
+        resultsContainer.innerHTML = "<p>No results found.</p>";
+        return;
+    }
+
+    resultsContainer.innerHTML = results.map(item => {
+        const title = item.title || item.name;
+        const poster = item.poster_path
+            ? `https://image.tmdb.org/t/p/w300${item.poster_path}`
+            : "./images/no-image.png";
+
+        return `
+            <div class="result-card" data-id="${item.id}" data-type="${item.media_type}">
+                <img src="${poster}" alt="${title}">
+                <h3>${title}</h3>
+            </div>
+        `;
+    }).join("");
+
+    enableCardClick();
+}
+
+function enableCardClick() {
+    const cards = document.querySelectorAll(".result-card");
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const movieId = card.dataset.id;
+            const type = card.dataset.type;
+
+            fetchDetails(movieId, type);
+        });
+    });
+}
+
+function fetchDetails(id, type) {
+    fetch(`https://api.themoviedb.org/3/${type}/${id}?api_key=${API_KEY}&language=${language}`)
+        .then(res => res.json())
+        .then(data => showModal(data))
+        .catch(() => alert("Error."));
+}
+
+function showModal(data) {
+    const modal = document.getElementById("movie-modal");
+
+    document.getElementById("modal-title").textContent = data.title || data.name;
+    document.getElementById("modal-year").textContent =
+        (data.release_date || data.first_air_date || "").slice(0, 4);
+    document.getElementById("modal-overview").textContent =
+        data.overview || "No description available.";
+
+    document.getElementById("modal-poster").src =
+        data.poster_path
+            ? `https://image.tmdb.org/t/p/w300${data.poster_path}`
+            : "./images/no-image.png";
+
+    modal.classList.remove("hidden");
+}
+
+document.getElementById("close-modal").addEventListener("click", () => {
+    document.getElementById("movie-modal").classList.add("hidden");
+});
