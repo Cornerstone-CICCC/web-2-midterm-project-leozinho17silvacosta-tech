@@ -23,7 +23,6 @@ let language = localStorage.getItem("language") || "en";
 function updateLanguage() {
     if (language === "pt") {
         document.querySelector("#home-section").textContent = "INÍCIO";
-        document.querySelector("#about-section").textContent = "SOBRE";
         document.querySelector("#neymar-genre").textContent = "DOCUMENTÁRIO";
         document.querySelector("#grownups-title").textContent = "GENTE GRANDE";
         document.querySelector("#grownups-genre").textContent = "COMÉDIA";
@@ -39,7 +38,6 @@ function updateLanguage() {
         document.querySelector("#whentheyseeus-genre").textContent = "DRAMA / HISTÓRIA REAL";
     } else {
         document.querySelector("#home-section").textContent = "HOME";
-        document.querySelector("#about-section").textContent = "ABOUT";
         document.querySelector("#neymar-genre").textContent = "DOCUMENTARY";
         document.querySelector("#grownups-title").textContent = "GROWN UPS";
         document.querySelector("#grownups-genre").textContent = "COMEDY";
