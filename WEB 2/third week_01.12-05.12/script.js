@@ -51,21 +51,25 @@ if (localStorage.getItem("theme") === "light") {
 const langToggle = document.getElementById("lang-toggle");
 
 const textPT = {
-    home: "HOME",
+    home: "INÍCIO",
     about: "SOBRE",
     search: "BUSCAR",
+    searchMovies: "BUSCAR FILMES",
     trending: "EM ALTA",
     findBest: "ENCONTRE OS MELHORES",
-    paragraph: "Navegue por vários gêneros, pegue sua pipoca e bebida favorita, fique confortável e aperte o play!"
+    paragraph: "Navegue por vários gêneros, pegue sua pipoca e bebida favorita, fique confortável e aperte o play!",
+    followUs: "NOS SIGA!"
 };
 
 const textEN = {
     home: "HOME",
     about: "ABOUT",
     search: "SEARCH",
+    searchMovies: "SEARCH MOVIES",
     trending: "TRENDING",
     findBest: "FIND THE BEST",
-    paragraph: "Browse through many genres, grab your popcorn, get cozy, and hit play!"
+    paragraph: "Browse through many genres, grab your popcorn, get cozy, and hit play!",
+    followUs: "FOLLOW US!"
 };
 
 function updateLanguage(lang) {
@@ -74,7 +78,9 @@ function updateLanguage(lang) {
     document.querySelector("#home-section").textContent = t.home;
     document.querySelector("#about-section").textContent = t.about;
     document.querySelector("#search-section").textContent = t.search;
+    document.querySelector(".home-title button").textContent = t.searchMovies;
     document.querySelector(".trending-section h2").textContent = t.trending;
+    document.querySelector(".social-section h5").textContent = t.followUs;
     document.querySelector(".home-title h1").innerHTML = 
         `${t.findBest} <span id="popcorn-button">🍿</span> <span id="title-movies"><span>M</span><span>O</span><span>V</span><span>I</span><span>E</span><span>S</span></span>`;
 

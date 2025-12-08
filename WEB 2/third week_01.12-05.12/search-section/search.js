@@ -22,14 +22,12 @@ let language = localStorage.getItem("language") || "en";
 function updateLanguage() {
     if (language === "pt") {
         document.querySelector("#home-section").textContent = "INÍCIO";
-        document.querySelector("#about-section").textContent = "SOBRE";
         document.querySelector(".search-section h2").textContent = "BUSCAR FILMES";
         document.getElementById("search-input").placeholder = "Digite o nome de um filme ou série...";
         document.getElementById("search-btn").textContent = "BUSCAR";
         document.querySelector(".results-section h2").textContent = "RESULTADOS";
     } else {
         document.querySelector("#home-section").textContent = "HOME";
-        document.querySelector("#about-section").textContent = "ABOUT";
         document.querySelector(".search-section h2").textContent = "SEARCH MOVIES";
         document.getElementById("search-input").placeholder = "Type a movie or TV show name...";
         document.getElementById("search-btn").textContent = "SEARCH";

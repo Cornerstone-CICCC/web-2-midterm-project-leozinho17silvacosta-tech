@@ -169,6 +169,10 @@ body {
     margin-top: -30px;
 }
 
+.home-title a {
+    text-decoration: none;
+}
+
 .home-title p {
     font-family: 'Outfit', sans-serif;
     font-size: 1.5rem;
@@ -176,6 +180,7 @@ body {
     line-height: 50px;
     margin-top: -50px;
 }
+
 .home-title button {
     font-family: 'Changa One', sans-serif;
     color: rgb(0, 0, 0);
@@ -188,6 +193,7 @@ body {
     border-radius: 25px;
     margin-bottom: 20px;
     transition: all 0.5s ease;
+    text-decoration: none;
 }
 
 .home-title button:hover {
